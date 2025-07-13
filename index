@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aciona Commerce — E-commerce para Moda no Atacado</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0f0f0f;
+      color: white;
+      line-height: 1.6;
+    }
+    a {
+      color: #bcf452;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    header, section {
+      max-width: 900px;
+      margin: auto;
+      padding: 4rem 1.5rem;
+    }
+    .title {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+      color: #bcf452;
+    }
+    .subtitle {
+      font-size: 1.4rem;
+      margin-bottom: 2rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+    .highlight-box {
+      border-left: 4px solid #bcf452;
+      padding-left: 1rem;
+      margin-bottom: 1rem;
+    }
+    .video-thumb {
+      background-color: #1a1a1a;
+      height: 180px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #666;
+      font-size: 0.9rem;
+    }
+    .btn {
+      background-color: #bcf452;
+      color: black;
+      font-weight: bold;
+      padding: 1rem 2rem;
+      border-radius: 30px;
+      border: none;
+      cursor: pointer;
+      text-align: center;
+      display: inline-block;
+      margin-top: 2rem;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.85rem;
+      color: #888;
+      margin-top: 4rem;
+      padding: 2rem;
+    }
+    @media (max-width: 768px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+      .title {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1 class="title">Gestão de E-commerce para Confecções no Atacado</h1>
+    <p class="subtitle">A Aciona Commerce é a parceira que sua marca precisava para entrar de vez no digital e vender todos os dias — com estrutura, estratégia e suporte real.</p>
+    <a href="#formulario" class="btn">Quero ser cliente</a>
+  </header>
+
+  <section>
+    <h2 class="title">O que entregamos</h2>
+    <div class="grid">
+      <div class="highlight-box">✅ Criação de E-commerce rápido e com SEO</div>
+      <div class="highlight-box">✅ Integração com marketplaces, ERPs, frete e pagamentos</div>
+      <div class="highlight-box">✅ Suporte ágil com plano de crescimento contínuo</div>
+      <div class="highlight-box">✅ Diagnóstico gratuito da sua operação atual</div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="title">Que tipo de cliente buscamos</h2>
+    <div class="highlight-box">✔️ Marcas que querem crescer de forma consistente</div>
+    <div class="highlight-box">✔️ Empresas que entendem que resultado não vem de fórmula mágica</div>
+    <div class="highlight-box">✔️ Confecções que querem profissionalizar sua operação digital</div>
+
+    <h2 style="margin-top: 3rem;" class="title">E quem não buscamos</h2>
+    <div class="highlight-box">✖️ Negócios que tratam e-commerce como hobby</div>
+    <div class="highlight-box">✖️ Quem quer "milagre" em 7 dias</div>
+    <div class="highlight-box">✖️ Quem não está disposto a mudar processos</div>
+  </section>
+
+  <section>
+    <h2 class="title">Depoimentos de clientes</h2>
+    <div class="grid">
+      <div>
+        <div class="video-thumb">[Vídeo da Glup Kids]</div>
+        <p>“A Aciona entregou mais que um site. Trouxe clareza de vendas.”</p>
+      </div>
+      <div>
+        <div class="video-thumb">[Vídeo da RJNA Plus]</div>
+        <p>“Com o plano de crescimento, finalmente o digital virou rotina.”</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="title">Quem está por trás da Aciona</h2>
+    <p>
+      Somos um time especialista em confecção, tecnologia e vendas. Nascemos no coração do polo têxtil do Agreste, e conhecemos de perto a realidade das fábricas de moda no atacado.
+    </p>
+    <p style="margin-top: 1rem;">
+      Nosso diferencial? Agilidade, acompanhamento real e foco em resultado para quem vende moda de verdade.
+    </p>
+  </section>
+
+  <section id="formulario">
+    <h2 class="title">Vamos conversar?</h2>
+    <p class="subtitle">Preencha o formulário e receba um diagnóstico gratuito da sua marca:</p>
+    <form onsubmit="enviarParaWhatsapp(); return false;">
+      <input type="text" id="nome" placeholder="Seu nome" required style="width:100%;padding:1rem;margin:1rem 0;border-radius:10px;border:none;">
+      <input type="email" id="email" placeholder="Seu e-mail" required style="width:100%;padding:1rem;margin:1rem 0;border-radius:10px;border:none;">
+      <textarea id="mensagem" placeholder="Fale brevemente sobre sua confecção" style="width:100%;padding:1rem;margin:1rem 0;border-radius:10px;border:none;"></textarea>
+      <button type="submit" class="btn">Falar com a Aciona no WhatsApp</button>
+    </form>
+  </section>
+
+  <footer>
+    © 2025 Aciona Commerce. Todos os direitos reservados.
+  </footer>
+
+  <script>
+    function enviarParaWhatsapp() {
+      const nome = document.getElementById("nome").value;
+      const email = document.getElementById("email").value;
+      const mensagem = document.getElementById("mensagem").value;
+
+      const texto = `Olá, sou ${nome}! Meu e-mail é ${email}.\n\nSobre minha confecção: ${mensagem}`;
+      const url = "https://wa.me/5581988906161?text=" + encodeURIComponent(texto);
+
+      window.open(url, "_blank");
+    }
+  </script>
+</body>
+</html>
